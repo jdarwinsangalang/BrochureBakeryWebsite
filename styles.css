@@ -1,0 +1,348 @@
+:root {
+    --primary-color: #F8EDE3;
+    --secondary-color: #F2C6A0;
+    --accent-color: #C08552;
+    --text-color: #4E342E;
+    --border-color: #9C6D47;
+    --shadow-color: rgba(78, 52, 46, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+header {
+    background: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 5%;
+    box-shadow: 0 4px 10px var(--shadow-color);
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 60px;
+}
+
+.container {
+    padding-top: 70px;
+}
+
+/* Logo Styling */
+.logo img {
+    max-width: 100px;
+    height: auto;
+    margin-right: 15px;
+}
+
+
+/* Bakery Cake Icon */
+.bakery-icon {
+    font-size: 2.5rem;
+    color: #D45D79;
+    margin-left: auto;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.primary {
+    background: #D45D79;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.primary:hover {
+    background: #b1425a;
+}
+
+.cart-icon {
+    font-size: 1.5em;
+}
+
+.cake-item {
+    text-align: center;
+    width: 250px;
+}
+
+.cake-item img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 5px solid var(--accent-color);
+}
+
+.cake-item p {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-top: 10px;
+}
+
+.primary {
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background 0.3s ease-in-out;
+}
+
+.primary:hover {
+    background: #9C6D47;
+}
+
+/* Product Section */
+.product-section {
+    text-align: center;
+    padding: 40px 0;
+}
+
+h2 {
+    font-size: 2em;
+    color: #D45D79;
+    margin-bottom: 20px;
+}
+
+/* Description for each row */
+.product-row-desc {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+/* Base grid setup */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+    justify-items: center;
+}
+
+/* Product item styling */
+.product-item {
+    background: transparent;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in forwards;
+    animation-delay: 0.5s;
+    width: 100%;
+}
+
+product-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+   
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+}
+
+/* Make images circular */
+.product-item img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #D45D79;
+}
+
+/* Product name */
+.product-item p {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Size options */
+.size-options {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.size-options button {
+    background: #D45D79;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.size-options button:hover {
+    background: #b1425a;
+}
+
+/* Responsive Styles */
+@media (max-width: 1920px) and (min-width: 947px) and (orientation: landscape) {
+    .container {
+        width: 80%;
+    }
+}
+
+@media (max-width: 1080px) and (min-width: 810px) and (orientation: landscape) {
+    .container {
+        width: 85%;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 810px) and (min-width: 1080px) and (orientation: portrait) {
+    .container {
+        width: 90%;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 854px) and (min-width: 384px) and (orientation: landscape) {
+    .container {
+        width: 95%;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 384px) and (min-width: 854px) and (orientation: portrait) {
+    .container {
+        width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* Cake Image Styling */
+.cake-item img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--accent-color);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect - Lift Up */
+.cake-item:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+/* Cake Name */
+.cake-item p {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-top: 10px;
+}
+/* Ensure the cake section remains properly aligned in both landscape and portrait */
+.cake-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background: url('image/pexels-cottonbro-3992134.jpg') no-repeat center center/cover;
+    background-color: #f3e9dc;
+    min-height: 500px;
+    width: 100%;
+    animation: slideIn 1s ease-in-out;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding-top: 100px;
+    box-sizing: border-box;
+}
+
+/* Adjust Cake Content for Portrait Mode */
+@media (max-width: 768px) and (orientation: portrait) {
+    .cake-section {
+        padding: 30px;
+        flex-direction: column;
+        justify-content: center;
+        min-height: auto;
+    }
+
+    /* Adjust the Cake Content */
+    .cake-content {
+        max-width: 90%;
+        text-align: center;
+        margin-top: 100px;
+    }
+
+    .cake-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .cake-content p {
+        font-size: 1rem;
+    }
+
+    .cake-image img {
+        width: 80%;
+        height: auto;
+        margin-top: 20px;
+    }
+}
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;700&display=swap');
+.cake-content h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.cake-content p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: white;
+
+}
+
+.product-row-desc {
+    color: white;
+}
